@@ -1,0 +1,12 @@
+<%= simple_form_for(@entidade) do |f| %>
+
+	<%= f.simple_fields_for :enderecos do |c| %>
+	<div>
+		<%= c.input :cep %>
+    </div>
+
+	
+<% end %>
+<% end %>
+
+

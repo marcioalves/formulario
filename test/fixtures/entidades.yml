@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codEmp: 1
+  razaoSocial: MyString
+  cep: MyString
+  numero: 1
+  complemento: MyText
+
+two:
+  codEmp: 1
+  razaoSocial: MyString
+  cep: MyString
+  numero: 1
+  complemento: MyText

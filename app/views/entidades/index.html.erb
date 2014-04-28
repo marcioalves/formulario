@@ -1,0 +1,55 @@
+<h1>Listing entidades</h1>
+
+
+<%= simple_form_for :entidade, as: :entidade_namespace, url: entidades_path do |f| %>
+
+
+  <%= f.error_notification %>
+
+  <div class=" well well-lg">
+    
+
+  <div class="form-inputs">
+    
+    <%= f.input :complemento %>
+  </div>
+
+    <%= submit_tag t('search'), :id => "btn_search",:class => 'btn btn-primary' %>
+
+
+  </div>
+
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Codemp</th>
+      <th>Razaosocial</th>
+      <th>Cep</th>
+      <th>Numero</th>
+      <th>Complemento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entidades.each do |entidade| %>
+      <tr>
+        <td><%= entidade.codEmp %></td>
+        <td><%= entidade.razaoSocial %></td>
+        <td><%= entidade.cep %></td>
+        <td><%= entidade.numero %></td>
+        <td><%= entidade.complemento %></td>
+        <td><%= link_to 'Show', entidade %></td>
+        <td><%= link_to 'Edit', edit_entidade_path(entidade) %></td>
+        <td><%= link_to 'Destroy', entidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entidade', new_entidade_path %>

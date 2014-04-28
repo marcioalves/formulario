@@ -1,0 +1,28 @@
+<%= simple_form_for(@entidade) do |f| %>
+  <%= f.error_notification %>
+
+  <div class=" well well-lg">
+    
+
+  <div class="form-inputs">
+    
+
+    <%= f.input :codEmp %>
+    <%= f.input :razaoSocial %>
+  
+    <%= render 'enderecos' %>
+
+    <%= f.input :numero %>
+    <%= f.input :complemento %>
+  </div>
+
+
+ 
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+  </div>
+
+<% end %>

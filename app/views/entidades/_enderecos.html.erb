@@ -1,0 +1,13 @@
+<%= simple_form_for(@entidade) do |f| %>
+
+	<%= f.simple_fields_for :enderecos do |a| %>
+	<div>
+		<%= a.input :cep %>
+    	<%= a.input :logradouro %>
+    </div>
+
+	
+<% end %>
+<% end %>
+
+
